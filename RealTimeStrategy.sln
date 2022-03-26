@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "where-allocations", "where-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirror.Authenticators", "Mirror.Authenticators.csproj", "{8f08c81f-14b7-5768-f956-7fe1ba8cd4f8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{8ca18058-35c0-bf35-da09-eb88cb6ada03}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Mirror.CodeGen", "Unity.Mirror.CodeGen.csproj", "{baeb7cd2-a082-86eb-1966-8a12b193fb42}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirror.Editor", "Mirror.Editor.csproj", "{bc6f4a77-f0e8-3210-acb1-121b78ecf331}"
@@ -44,6 +46,8 @@ Global
 		{3e19a2da-ad01-179e-9d9c-2f64fff58ece}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8f08c81f-14b7-5768-f956-7fe1ba8cd4f8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8f08c81f-14b7-5768-f956-7fe1ba8cd4f8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ca18058-35c0-bf35-da09-eb88cb6ada03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ca18058-35c0-bf35-da09-eb88cb6ada03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{baeb7cd2-a082-86eb-1966-8a12b193fb42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{baeb7cd2-a082-86eb-1966-8a12b193fb42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{bc6f4a77-f0e8-3210-acb1-121b78ecf331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
