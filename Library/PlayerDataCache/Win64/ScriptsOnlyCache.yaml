@@ -3,19 +3,21 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - RTSNetworkManager
     - UnitMovement
+    - UnitSpawner
     Mirror.Components.dll:
     - Mirror.NetworkTransform
-    Mirror.Editor.dll:
-    - Mirror.NetworkBehaviourInspector
     Mirror.dll:
     - Mirror.NetworkIdentity
     - Mirror.NetworkManagerHUD
     - Mirror.NetworkStartPosition
     - kcp2k.KcpTransport
     Unity.InputSystem.dll:
+    - UnityEngine.InputSystem.InputActionAsset
+    - UnityEngine.InputSystem.InputActionReference
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
+    - UnityEngine.InputSystem.UI.InputSystemUIInputModule
     Unity.ProBuilder.Editor.dll:
     - UnityEditor.ProBuilder.EditorToolbar
     - UnityEditor.ProBuilder.ProBuilderEditor
@@ -66,6 +68,8 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.PhysicsRaycaster
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.ContentSizeFitter
@@ -146,6 +150,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2892}
     - Class: 114
+      Script: {instanceID: 3092}
+    - Class: 114
       Script: {instanceID: 3142}
     - Class: 114
       Script: {instanceID: 3268}
@@ -176,17 +182,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4172}
     - Class: 114
+      Script: {instanceID: 4186}
+    - Class: 114
       Script: {instanceID: 4238}
     - Class: 114
       Script: {instanceID: 4346}
     - Class: 114
       Script: {instanceID: 4516}
     - Class: 114
+      Script: {instanceID: 4684}
+    - Class: 114
       Script: {instanceID: 4928}
     - Class: 114
       Script: {instanceID: 5124}
     - Class: 114
+      Script: {instanceID: 5150}
+    - Class: 114
       Script: {instanceID: 5202}
+    - Class: 114
+      Script: {instanceID: 5256}
     - Class: 114
       Script: {instanceID: 5380}
     - Class: 114
@@ -213,6 +227,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 30446}
     - Class: 114
       Script: {instanceID: 31178}
+    - Class: 114
+      Script: {instanceID: 32638}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1962,7 +1978,7 @@ ScriptsOnlyBuild:
     className: NetworkManager
   - hash:
       serializedVersion: 2
-      Hash: 7b6113efb956a45fe463259b12a0687f
+      Hash: 642f836ec0876606c27e63a67cf18dcd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RTSNetworkManager
@@ -1972,6 +1988,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UnitMovement
+  - hash:
+      serializedVersion: 2
+      Hash: 067e81fa3a445454099cee5602247fb1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UnitSpawner
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
