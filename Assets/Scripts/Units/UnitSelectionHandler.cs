@@ -10,7 +10,7 @@ public class UnitSelectionHandler : MonoBehaviour
 
   Camera mainCamera;
 
-  List<Unit> selectedUnits = new List<Unit>();
+  public List<Unit> SelectedUnits { get; } = new List<Unit>();
 
   void Start()
   {
@@ -22,12 +22,12 @@ public class UnitSelectionHandler : MonoBehaviour
     if (Mouse.current.leftButton.wasPressedThisFrame)
     {
       // Start selection area
-      foreach(Unit selectedUnit in selectedUnits)
+      foreach(Unit selectedUnit in SelectedUnits)
       {
         selectedUnit.Deselect();
       }
 
-      selectedUnits.Clear();
+      SelectedUnits.Clear();
     }
     else if (Mouse.current.leftButton.wasReleasedThisFrame)
     {
@@ -46,8 +46,8 @@ public class UnitSelectionHandler : MonoBehaviour
     if (!unit.hasAuthority) { return; }
 
     // Loop through all selected units and invoke Select, which enables the selection circle
-    selectedUnits.Add(unit);
-    foreach(Unit selectedUnit in selectedUnits)
+    SelectedUnits.Add(unit);
+    foreach(Unit selectedUnit in SelectedUnits)
     {
       selectedUnit.Select();
     }

@@ -41,6 +41,7 @@
      <Compile Include="Assets\Scripts\Buildings\UnitSpawner.cs" />
      <Compile Include="Assets\Scripts\Units\Unit.cs" />
      <Compile Include="Assets\Scripts\Units\UnitSelectionHandler.cs" />
+     <Compile Include="Assets\Scripts\Units\UnitCommandGiver.cs" />
      <None Include="Assets\Mirror\Version.txt" />
      <None Include="Assets\Mirror\Readme.txt" />
      <None Include="Assets\Mirror\Notice.txt" />

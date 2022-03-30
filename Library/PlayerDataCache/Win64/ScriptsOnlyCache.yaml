@@ -2,7 +2,10 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - RTSNetworkManager
+    - Unit
+    - UnitCommandGiver
     - UnitMovement
+    - UnitSelectionHandler
     - UnitSpawner
     Mirror.Components.dll:
     - Mirror.NetworkTransform
@@ -21,6 +24,7 @@ ScriptsOnlyBuild:
     Unity.ProBuilder.Editor.dll:
     - UnityEditor.ProBuilder.EditorToolbar
     - UnityEditor.ProBuilder.ProBuilderEditor
+    - UnityEditor.ProBuilder.TooltipEditor
     Unity.RenderPipelines.Core.Runtime.dll:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
     - UnityEngine.Rendering.UI.DebugUIHandlerButton
@@ -229,9 +233,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 31178}
     - Class: 114
       Script: {instanceID: 32638}
+    - Class: 114
+      Script: {instanceID: 34830}
+    - Class: 114
+      Script: {instanceID: 36728}
+    - Class: 114
+      Script: {instanceID: 42038}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -1994,6 +2006,24 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UnitSpawner
+  - hash:
+      serializedVersion: 2
+      Hash: a0f8358d759973b6790aceeee75c84c8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Unit
+  - hash:
+      serializedVersion: 2
+      Hash: c91c24b7d3b6b2991572f426b51baff3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UnitSelectionHandler
+  - hash:
+      serializedVersion: 2
+      Hash: a821e86e9fa78f9981eed3f00213d888
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UnitCommandGiver
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
