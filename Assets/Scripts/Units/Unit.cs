@@ -2,34 +2,72 @@ using System.Collections;
 using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class Unit : NetworkBehaviour
+public class RTSPlayer : NetworkBehaviour
 {
-  [SerializeField] UnitMovement unitMovement = null;
-  [SerializeField] UnityEvent onSelected = null;
-  [SerializeField] UnityEvent onDeselected = null;
+    [SerializeField] private List<Unit> myUnits = new List<Unit>();
 
-  public UnitMovement GetUnitMovement()
-  {
-    return unitMovement;
-  }
+    #region Server
 
-  #region Client
+    public override void OnStartServer()
+    {
+        Unit.ServerOnUnitSpawned += ServerHandleUnitSpawned;
+        Unit.ServerOnUnitDespawned += ServerHandleUnitDespawned;
+    }
 
-  [Client]
-  public void Select()
-  {
-    if (!hasAuthority) { return; }
-    onSelected?.Invoke();
-  }
+    public override void OnStopServer()
+    {
+        Unit.ServerOnUnitSpawned -= ServerHandleUnitSpawned;
+        Unit.ServerOnUnitDespawned -= ServerHandleUnitDespawned;
+    }
 
-  [Client]
-  public void Deselect()
-  {
-    if (!hasAuthority) { return; }
-    onDeselected?.Invoke();
-  }
+    private void ServerHandleUnitSpawned(Unit unit)
+    {
+        if (unit.connectionToClient.connectionId != connectionToClient.connectionId) { return; }
 
-  #endregion
+        myUnits.Add(unit);
+    }
+
+    private void ServerHandleUnitDespawned(Unit unit)
+    {
+        if (unit.connectionToClient.connectionId != connectionToClient.connectionId) { return; }
+
+        myUnits.Remove(unit);
+    }
+
+    #endregion
+
+    #region Client
+
+    public override void OnStartClient()
+    {
+        if (!isClientOnly) { return; }
+
+        Unit.AuthorityOnUnitSpawned += AuthorityHandleUnitSpawned;
+        Unit.AuthorityOnUnitDespawned += AuthorityHandleUnitDespawned;
+    }
+
+    public override void OnStopClient()
+    {
+        if (!isClientOnly) { return; }
+
+        Unit.AuthorityOnUnitSpawned -= AuthorityHandleUnitSpawned;
+        Unit.AuthorityOnUnitDespawned -= AuthorityHandleUnitDespawned;
+    }
+
+    private void AuthorityHandleUnitSpawned(Unit unit)
+    {
+        if (!hasAuthority) { return; }
+
+        myUnits.Add(unit);
+    }
+
+    private void AuthorityHandleUnitDespawned(Unit unit)
+    {
+        if (!hasAuthority) { return; }
+
+        myUnits.Remove(unit);
+    }
+
+    #endregion
 }
