@@ -1,73 +1,76 @@
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class RTSPlayer : NetworkBehaviour
+public class Unit : NetworkBehaviour
 {
-    [SerializeField] private List<Unit> myUnits = new List<Unit>();
+  [SerializeField] private UnitMovement unitMovement = null;
+  [SerializeField] private UnityEvent onSelected = null;
+  [SerializeField] private UnityEvent onDeselected = null;
 
-    #region Server
+  public static event Action<Unit> ServerOnUnitSpawned;
+  public static event Action<Unit> ServerOnUnitDespawned;
 
-    public override void OnStartServer()
-    {
-        Unit.ServerOnUnitSpawned += ServerHandleUnitSpawned;
-        Unit.ServerOnUnitDespawned += ServerHandleUnitDespawned;
-    }
+  public static event Action<Unit> AuthorityOnUnitSpawned;
+  public static event Action<Unit> AuthorityOnUnitDespawned;
 
-    public override void OnStopServer()
-    {
-        Unit.ServerOnUnitSpawned -= ServerHandleUnitSpawned;
-        Unit.ServerOnUnitDespawned -= ServerHandleUnitDespawned;
-    }
+  public UnitMovement GetUnitMovement()
+  {
+    return unitMovement;
+  }
 
-    private void ServerHandleUnitSpawned(Unit unit)
-    {
-        if (unit.connectionToClient.connectionId != connectionToClient.connectionId) { return; }
+  #region Server
 
-        myUnits.Add(unit);
-    }
+  public override void OnStartServer()
+  {
+    ServerOnUnitSpawned?.Invoke(this);
+  }
 
-    private void ServerHandleUnitDespawned(Unit unit)
-    {
-        if (unit.connectionToClient.connectionId != connectionToClient.connectionId) { return; }
+  public override void OnStopServer()
+  {
+    ServerOnUnitDespawned?.Invoke(this);
+  }
 
-        myUnits.Remove(unit);
-    }
+  #endregion
 
-    #endregion
+  #region Client
 
-    #region Client
+  public override void OnStartClient()
+  {
+    // If player is host/server or unit doesn't belong to player, return
+    // Only call the method below for clients who own the unit
+    if (!isClientOnly || !hasAuthority) { return; }
 
-    public override void OnStartClient()
-    {
-        if (!isClientOnly) { return; }
+    AuthorityOnUnitSpawned?.Invoke(this);
+  }
 
-        Unit.AuthorityOnUnitSpawned += AuthorityHandleUnitSpawned;
-        Unit.AuthorityOnUnitDespawned += AuthorityHandleUnitDespawned;
-    }
+  public override void OnStopClient()
+  {
+    // If player is host/server or unit doesn't belong to player, return
+    // Only call the method below for clients who own the unit
+    if (!isClientOnly || !hasAuthority) { return; }
 
-    public override void OnStopClient()
-    {
-        if (!isClientOnly) { return; }
+    AuthorityOnUnitDespawned?.Invoke(this);
+  }
 
-        Unit.AuthorityOnUnitSpawned -= AuthorityHandleUnitSpawned;
-        Unit.AuthorityOnUnitDespawned -= AuthorityHandleUnitDespawned;
-    }
+  [Client]
+  public void Select()
+  {
+    if (!hasAuthority) { return; }
 
-    private void AuthorityHandleUnitSpawned(Unit unit)
-    {
-        if (!hasAuthority) { return; }
+    onSelected?.Invoke();
+  }
 
-        myUnits.Add(unit);
-    }
+  [Client]
+  public void Deselect()
+  {
+    if (!hasAuthority) { return; }
 
-    private void AuthorityHandleUnitDespawned(Unit unit)
-    {
-        if (!hasAuthority) { return; }
+    onDeselected?.Invoke();
+  }
 
-        myUnits.Remove(unit);
-    }
-
-    #endregion
+  #endregion
 }

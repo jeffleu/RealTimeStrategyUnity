@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - RTSNetworkManager
+    - RTSPlayer
     - Unit
     - UnitCommandGiver
     - UnitMovement
@@ -239,6 +240,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 36728}
     - Class: 114
       Script: {instanceID: 42038}
+    - Class: 114
+      Script: {instanceID: 43276}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -2024,6 +2027,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UnitCommandGiver
+  - hash:
+      serializedVersion: 2
+      Hash: 78a0d8015f73e40fbda3ee846c9ba7c9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RTSPlayer
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
