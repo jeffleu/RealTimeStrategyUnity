@@ -8,6 +8,18 @@ public class UnitMovement : NetworkBehaviour
 
   #region Server
 
+  [ServerCallback] // Prevents client from calling this
+  void Update()
+  {
+    // If agent doesn't have path, return so we aren't calling ResetPath, which
+    // introduces a bug where sometimes agent doesn't move
+    if (!agent.hasPath) { return; }
+
+    if (agent.remainingDistance > agent.stoppingDistance) { return; }
+
+    agent.ResetPath();
+  }
+
   [Command]
   public void CmdMove(Vector3 position)
   {
