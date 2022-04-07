@@ -5,6 +5,7 @@ using UnityEngine.AI;
 public class UnitMovement : NetworkBehaviour
 {
   [SerializeField] NavMeshAgent agent = null;
+  [SerializeField] Targeter targeter = null;
 
   #region Server
 
@@ -23,6 +24,8 @@ public class UnitMovement : NetworkBehaviour
   [Command]
   public void CmdMove(Vector3 position)
   {
+    targeter.ClearTarget();
+
     // Return if position is not a valid destination to move unit to
     if (!NavMesh.SamplePosition(position, out NavMeshHit hit, 1f, NavMesh.AllAreas)) { return; }
     // Move unit to mouse position

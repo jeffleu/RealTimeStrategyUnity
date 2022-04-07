@@ -36,13 +36,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Units\UnitSelectionHandler.cs" />
+     <Compile Include="Assets\Scripts\Buildings\UnitSpawner.cs" />
+     <Compile Include="Assets\Scripts\Networking\RTSPlayer.cs" />
      <Compile Include="Assets\Scripts\Networking\RTSNetworkManager.cs" />
      <Compile Include="Assets\Scripts\Units\UnitMovement.cs" />
-     <Compile Include="Assets\Scripts\Buildings\UnitSpawner.cs" />
      <Compile Include="Assets\Scripts\Units\Unit.cs" />
-     <Compile Include="Assets\Scripts\Units\UnitSelectionHandler.cs" />
      <Compile Include="Assets\Scripts\Units\UnitCommandGiver.cs" />
-     <Compile Include="Assets\Scripts\Networking\RTSPlayer.cs" />
+     <Compile Include="Assets\Scripts\Combat\Targetable.cs" />
+     <Compile Include="Assets\Scripts\Combat\Targeter.cs" />
      <None Include="Assets\Mirror\Version.txt" />
      <None Include="Assets\Mirror\Readme.txt" />
      <None Include="Assets\Mirror\Notice.txt" />
@@ -269,8 +271,8 @@
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.32f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.CecilX.Mdb">
-        <HintPath>C:\Users\Jeff\Documents\Unity\RealTimeStrategy\Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Mdb.dll</HintPath>
+    <Reference Include="Mono.CecilX.Rocks">
+        <HintPath>C:\Users\Jeff\Documents\Unity\RealTimeStrategy\Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Mono.CecilX.Pdb">
         <HintPath>C:\Users\Jeff\Documents\Unity\RealTimeStrategy\Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Pdb.dll</HintPath>
@@ -278,8 +280,8 @@
     <Reference Include="Mono.CecilX">
         <HintPath>C:\Users\Jeff\Documents\Unity\RealTimeStrategy\Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.CecilX.Rocks">
-        <HintPath>C:\Users\Jeff\Documents\Unity\RealTimeStrategy\Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Rocks.dll</HintPath>
+    <Reference Include="Mono.CecilX.Mdb">
+        <HintPath>C:\Users\Jeff\Documents\Unity\RealTimeStrategy\Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.32f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -709,22 +711,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Telepathy.csproj">
-      <Project>{25b5b00c-de71-ba6c-6f80-9ebf92166224}</Project>
-      <Name>Telepathy</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Components.csproj">
-      <Project>{6f3ebebc-f103-7562-2c29-122ebbaa790c}</Project>
-      <Name>Mirror.Components</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.csproj">
-      <Project>{2a797ad9-2c45-7d01-0a7d-2d1c2cad8ed2}</Project>
-      <Name>Mirror.Examples</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.CompilerSymbols.csproj">
-      <Project>{440f588a-b43f-a71a-6fdf-b4485daffa61}</Project>
-      <Name>Mirror.CompilerSymbols</Name>
-    </ProjectReference>
     <ProjectReference Include="Mirror.csproj">
       <Project>{3973ae81-3417-d801-02d2-0fce80f2df20}</Project>
       <Name>Mirror</Name>
@@ -733,21 +719,37 @@
       <Project>{7706245f-c4ca-3c3a-0aec-5a941fa1e6b6}</Project>
       <Name>kcp2k</Name>
     </ProjectReference>
+    <ProjectReference Include="Mirror.Examples.csproj">
+      <Project>{2a797ad9-2c45-7d01-0a7d-2d1c2cad8ed2}</Project>
+      <Name>Mirror.Examples</Name>
+    </ProjectReference>
     <ProjectReference Include="Mirror.Editor.csproj">
       <Project>{bc6f4a77-f0e8-3210-acb1-121b78ecf331}</Project>
       <Name>Mirror.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="where-allocations.csproj">
-      <Project>{3e19a2da-ad01-179e-9d9c-2f64fff58ece}</Project>
-      <Name>where-allocations</Name>
+    <ProjectReference Include="Mirror.CompilerSymbols.csproj">
+      <Project>{440f588a-b43f-a71a-6fdf-b4485daffa61}</Project>
+      <Name>Mirror.CompilerSymbols</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Authenticators.csproj">
       <Project>{8f08c81f-14b7-5768-f956-7fe1ba8cd4f8}</Project>
       <Name>Mirror.Authenticators</Name>
     </ProjectReference>
+    <ProjectReference Include="Telepathy.csproj">
+      <Project>{25b5b00c-de71-ba6c-6f80-9ebf92166224}</Project>
+      <Name>Telepathy</Name>
+    </ProjectReference>
+    <ProjectReference Include="where-allocations.csproj">
+      <Project>{3e19a2da-ad01-179e-9d9c-2f64fff58ece}</Project>
+      <Name>where-allocations</Name>
+    </ProjectReference>
     <ProjectReference Include="SimpleWebTransport.csproj">
       <Project>{9a4c3a67-56ec-7fd1-1abd-7fc266133176}</Project>
       <Name>SimpleWebTransport</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Components.csproj">
+      <Project>{6f3ebebc-f103-7562-2c29-122ebbaa790c}</Project>
+      <Name>Mirror.Components</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

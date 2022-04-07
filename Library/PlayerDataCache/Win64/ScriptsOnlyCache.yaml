@@ -3,6 +3,8 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - RTSNetworkManager
     - RTSPlayer
+    - Targetable
+    - Targeter
     - Unit
     - UnitCommandGiver
     - UnitMovement
@@ -188,6 +190,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -288,6 +292,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6434}
     - Class: 114
       Script: {instanceID: 6582}
+    - Class: 114
+      Script: {instanceID: 30290}
+    - Class: 114
+      Script: {instanceID: 30296}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1637,7 +1645,7 @@ ScriptsOnlyBuild:
     className: ShadowsMidtonesHighlights
   - hash:
       serializedVersion: 2
-      Hash: db4974d1c0dc8dd4e8991eda400257bd
+      Hash: f51c501a1e725010dac389a02f78a04a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UnitMovement
@@ -1847,7 +1855,7 @@ ScriptsOnlyBuild:
     className: NetworkRigidbody2D
   - hash:
       serializedVersion: 2
-      Hash: a0f8358d759973b6790aceeee75c84c8
+      Hash: 82b5fa49ea9807fa667ad3f7517fb1f1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Unit
@@ -2073,6 +2081,18 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
+  - hash:
+      serializedVersion: 2
+      Hash: cb3d51a51abb534d5681968039be290d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Targetable
+  - hash:
+      serializedVersion: 2
+      Hash: b4283ee96b4b458c43299004cdfad149
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Targeter
   platform: 19
   scenePathNames:
   - Assets/Scenes/Scene_Menu.unity
