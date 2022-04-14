@@ -45,6 +45,8 @@
      <Compile Include="Assets\Scripts\Units\UnitCommandGiver.cs" />
      <Compile Include="Assets\Scripts\Combat\Targetable.cs" />
      <Compile Include="Assets\Scripts\Combat\Targeter.cs" />
+     <Compile Include="Assets\Scripts\Units\UnitFiring.cs" />
+     <Compile Include="Assets\Scripts\Units\UnitProjectile.cs" />
      <None Include="Assets\Mirror\Version.txt" />
      <None Include="Assets\Mirror\Readme.txt" />
      <None Include="Assets\Mirror\Notice.txt" />

@@ -7,7 +7,9 @@ ScriptsOnlyBuild:
     - Targeter
     - Unit
     - UnitCommandGiver
+    - UnitFiring
     - UnitMovement
+    - UnitProjectile
     - UnitSelectionHandler
     - UnitSpawner
     Mirror.Components.dll:
@@ -186,6 +188,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
@@ -296,9 +300,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 30290}
     - Class: 114
       Script: {instanceID: 30296}
+    - Class: 114
+      Script: {instanceID: 33812}
+    - Class: 114
+      Script: {instanceID: 35106}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -2093,6 +2103,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Targeter
+  - hash:
+      serializedVersion: 2
+      Hash: af48a789b1b7f4b1ee7e8472a0c5d783
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UnitFiring
+  - hash:
+      serializedVersion: 2
+      Hash: 086b3d0380114e99e006058a03f45b45
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UnitProjectile
   platform: 19
   scenePathNames:
   - Assets/Scenes/Scene_Menu.unity
