@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Health
+    - HealthDisplay
     - RTSNetworkManager
     - RTSPlayer
     - Targetable
@@ -123,35 +124,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1624}
     - Class: 114
-      Script: {instanceID: 1696}
+      Script: {instanceID: 1694}
     - Class: 114
-      Script: {instanceID: 1760}
+      Script: {instanceID: 1758}
     - Class: 114
-      Script: {instanceID: 1870}
+      Script: {instanceID: 1868}
     - Class: 114
-      Script: {instanceID: 3078}
+      Script: {instanceID: 3096}
     - Class: 114
-      Script: {instanceID: 3294}
+      Script: {instanceID: 3314}
     - Class: 114
-      Script: {instanceID: 3426}
+      Script: {instanceID: 3450}
     - Class: 114
-      Script: {instanceID: 4224}
+      Script: {instanceID: 4260}
     - Class: 114
-      Script: {instanceID: 4534}
+      Script: {instanceID: 4572}
     - Class: 114
-      Script: {instanceID: 5100}
+      Script: {instanceID: 5144}
     - Class: 114
-      Script: {instanceID: 5638}
+      Script: {instanceID: 5682}
     - Class: 114
-      Script: {instanceID: 5758}
+      Script: {instanceID: 5802}
     - Class: 114
-      Script: {instanceID: 5904}
+      Script: {instanceID: 5950}
     - Class: 114
-      Script: {instanceID: 6320}
+      Script: {instanceID: 6372}
     - Class: 114
-      Script: {instanceID: 6420}
+      Script: {instanceID: 6478}
     - Class: 114
-      Script: {instanceID: 6536}
+      Script: {instanceID: 6596}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -210,103 +211,105 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1628}
     - Class: 114
-      Script: {instanceID: 1636}
+      Script: {instanceID: 1634}
     - Class: 114
-      Script: {instanceID: 1642}
+      Script: {instanceID: 1640}
     - Class: 114
-      Script: {instanceID: 1898}
+      Script: {instanceID: 1896}
     - Class: 114
-      Script: {instanceID: 2004}
+      Script: {instanceID: 2002}
     - Class: 114
-      Script: {instanceID: 2016}
+      Script: {instanceID: 2014}
     - Class: 114
-      Script: {instanceID: 2030}
+      Script: {instanceID: 2028}
     - Class: 114
-      Script: {instanceID: 2120}
+      Script: {instanceID: 2118}
     - Class: 114
-      Script: {instanceID: 2442}
+      Script: {instanceID: 2446}
     - Class: 114
-      Script: {instanceID: 2444}
+      Script: {instanceID: 2448}
     - Class: 114
-      Script: {instanceID: 2480}
+      Script: {instanceID: 2484}
     - Class: 114
-      Script: {instanceID: 2482}
+      Script: {instanceID: 2486}
     - Class: 114
-      Script: {instanceID: 2782}
+      Script: {instanceID: 2792}
     - Class: 114
-      Script: {instanceID: 2906}
+      Script: {instanceID: 2918}
     - Class: 114
-      Script: {instanceID: 2942}
+      Script: {instanceID: 2956}
     - Class: 114
-      Script: {instanceID: 3078}
+      Script: {instanceID: 3024}
     - Class: 114
-      Script: {instanceID: 3276}
+      Script: {instanceID: 3096}
     - Class: 114
-      Script: {instanceID: 3342}
+      Script: {instanceID: 3296}
     - Class: 114
-      Script: {instanceID: 3344}
+      Script: {instanceID: 3364}
     - Class: 114
-      Script: {instanceID: 3496}
+      Script: {instanceID: 3366}
     - Class: 114
-      Script: {instanceID: 3504}
+      Script: {instanceID: 3472}
     - Class: 114
-      Script: {instanceID: 3656}
+      Script: {instanceID: 3524}
     - Class: 114
-      Script: {instanceID: 3712}
+      Script: {instanceID: 3534}
     - Class: 114
-      Script: {instanceID: 3786}
+      Script: {instanceID: 3688}
     - Class: 114
-      Script: {instanceID: 3912}
+      Script: {instanceID: 3744}
     - Class: 114
-      Script: {instanceID: 4076}
+      Script: {instanceID: 3818}
     - Class: 114
-      Script: {instanceID: 4102}
+      Script: {instanceID: 3946}
     - Class: 114
-      Script: {instanceID: 4314}
+      Script: {instanceID: 4112}
     - Class: 114
-      Script: {instanceID: 4358}
+      Script: {instanceID: 4138}
+    - Class: 114
+      Script: {instanceID: 4352}
     - Class: 114
       Script: {instanceID: 4396}
     - Class: 114
-      Script: {instanceID: 4514}
+      Script: {instanceID: 4434}
     - Class: 114
-      Script: {instanceID: 4518}
+      Script: {instanceID: 4552}
     - Class: 114
-      Script: {instanceID: 4596}
+      Script: {instanceID: 4556}
     - Class: 114
-      Script: {instanceID: 4722}
+      Script: {instanceID: 4636}
     - Class: 114
-      Script: {instanceID: 4780}
+      Script: {instanceID: 4764}
     - Class: 114
-      Script: {instanceID: 4910}
+      Script: {instanceID: 4822}
     - Class: 114
-      Script: {instanceID: 5160}
+      Script: {instanceID: 4952}
     - Class: 114
-      Script: {instanceID: 5394}
+      Script: {instanceID: 5204}
     - Class: 114
-      Script: {instanceID: 5610}
+      Script: {instanceID: 5438}
     - Class: 114
-      Script: {instanceID: 5698}
+      Script: {instanceID: 5654}
     - Class: 114
-      Script: {instanceID: 5740}
+      Script: {instanceID: 5742}
     - Class: 114
-      Script: {instanceID: 5990}
+      Script: {instanceID: 5784}
     - Class: 114
-      Script: {instanceID: 6126}
+      Script: {instanceID: 6036}
     - Class: 114
-      Script: {instanceID: 6176}
+      Script: {instanceID: 6174}
     - Class: 114
-      Script: {instanceID: 6230}
+      Script: {instanceID: 6224}
     - Class: 114
-      Script: {instanceID: 6256}
+      Script: {instanceID: 6280}
     - Class: 114
-      Script: {instanceID: 6440}
+      Script: {instanceID: 6306}
     - Class: 114
-      Script: {instanceID: 6588}
+      Script: {instanceID: 6500}
     - Class: 114
-      Script: {instanceID: 6832}
+      Script: {instanceID: 6650}
     - Class: 114
-      Script: {instanceID: 22878}
+      Script: {instanceID: 6898}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -836,6 +839,12 @@ ScriptsOnlyBuild:
     className: LookAtMainCamera
   - hash:
       serializedVersion: 2
+      Hash: 1cdc4b0b3be9ad442763b453556cdfb3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthDisplay
+  - hash:
+      serializedVersion: 2
       Hash: 62824bb9557c7e987502f2fbd2a26819
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -954,6 +963,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: Mirror
     className: NetworkStartPosition
+  - hash:
+      serializedVersion: 2
+      Hash: 514775331e04882828052c5022b7ab5d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Health
   - hash:
       serializedVersion: 2
       Hash: b3e36dea1bfde86a244b7fa99de2b5d2
@@ -2118,12 +2133,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
-  - hash:
-      serializedVersion: 2
-      Hash: 514775331e04882828052c5022b7ab5d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Health
   platform: 19
   scenePathNames:
   - Assets/Scenes/Scene_Menu.unity

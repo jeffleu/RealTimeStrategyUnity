@@ -5,21 +5,72 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637825014113843603
-    m_Hash: 2213264414
+      ticks: 637856059580989064
+    m_Hash: 2928920506
   m_LockFileStatus:
     m_FilePath: C:/Users/Jeff/Documents/Unity/RealTimeStrategy/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637837091212908301
-    m_Hash: 2046980362
+      ticks: 637856059581078561
+    m_Hash: 3161871274
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
+    - packageId: com.unity.2d.sprite@1.0.0
+      testable: 0
+      isDirectDependency: 1
+      version: 1.0.0
+      source: 2
+      resolvedPath: C:\Users\Jeff\Documents\Unity\RealTimeStrategy\Library\PackageCache\com.unity.2d.sprite@1.0.0
+      assetPath: Packages/com.unity.2d.sprite
+      name: com.unity.2d.sprite
+      displayName: 2D Sprite
+      author:
+        name: 
+        email: 
+        url: 
+      category: 2D
+      type: 
+      description: Use Unity Sprite Editor Window to create and edit Sprite asset
+        properties like pivot, borders and Physics shape
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.0
+        compatible:
+        - 1.0.0
+        verified: 1.0.0
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - 2d
+      - sprite
+      - sprite editor window
+      registry:
+        id: 
+        name: 
+        url: 
+        scopes: []
+        isDefault: 0
+        capabilities: 0
+      hasRegistry: 0
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.cinemachine@2.6.11
       testable: 0
       isDirectDependency: 1
@@ -654,8 +705,10 @@ m_PackageAssets:
         - 10.7.0
         - 10.8.0
         - 10.8.1
+        - 10.9.0
         compatible:
         - 10.8.1
+        - 10.9.0
         verified: 10.8.1
       dependencies:
       - name: com.unity.mathematics
@@ -2718,6 +2771,7 @@ m_PackageAssets:
         - 1.2.1
         - 1.2.4
         - 1.2.5
+        - 1.2.6
         compatible:
         - 0.0.12-preview.2
         - 0.0.12-preview.5
@@ -2735,7 +2789,8 @@ m_PackageAssets:
         - 1.2.1
         - 1.2.4
         - 1.2.5
-        verified: 1.2.5
+        - 1.2.6
+        verified: 1.2.6
       dependencies: []
       resolvedDependencies: []
       keywords:
@@ -2881,8 +2936,10 @@ m_PackageAssets:
         - 10.7.0
         - 10.8.0
         - 10.8.1
+        - 10.9.0
         compatible:
         - 10.8.1
+        - 10.9.0
         verified: 10.8.1
       dependencies:
       - name: com.unity.ugui
@@ -3041,8 +3098,10 @@ m_PackageAssets:
         - 10.7.0
         - 10.8.0
         - 10.8.1
+        - 10.9.0
         compatible:
         - 10.8.1
+        - 10.9.0
         verified: 10.8.1
       dependencies:
       - name: com.unity.render-pipelines.core

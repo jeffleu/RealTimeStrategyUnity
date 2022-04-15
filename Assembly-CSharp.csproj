@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\Units\UnitCommandGiver.cs" />
      <Compile Include="Assets\Scripts\Units\UnitFiring.cs" />
      <Compile Include="Assets\Scripts\Combat\Health.cs" />
+     <Compile Include="Assets\Scripts\Combat\HealthDisplay.cs" />
      <None Include="Assets\Mirror\Version.txt" />
      <None Include="Assets\Mirror\Readme.txt" />
      <None Include="Assets\Mirror\Notice.txt" />
