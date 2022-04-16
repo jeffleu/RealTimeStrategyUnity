@@ -138,9 +138,9 @@ GameObject:
   - component: {fileID: 3471483417404192979}
   - component: {fileID: 8707986137130051763}
   - component: {fileID: 5586409084442261089}
+  - component: {fileID: -6968496482651813338}
   - component: {fileID: 2623069152736685656}
   - component: {fileID: 71698586146450079}
-  - component: {fileID: -6968496482651813338}
   - component: {fileID: 6498219409858839575}
   - component: {fileID: 5130566424778700399}
   - component: {fileID: 5272832417323320233}
@@ -245,6 +245,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &-6968496482651813338
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5938189165136019942}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9285283, y: 2.317468, z: 2.6612577}
+  m_Center: {x: 0.014557838, y: 1.0571376, z: 0.025358677}
 --- !u!114 &2623069152736685656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  health: {fileID: 3446296496290080289}
   unitMovement: {fileID: 2623069152736685656}
   targeter: {fileID: 5130566424778700399}
   onSelected:
@@ -308,19 +322,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!65 &-6968496482651813338
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5938189165136019942}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.9285283, y: 2.317468, z: 2.6612577}
-  m_Center: {x: 0.014557838, y: 1.0571376, z: 0.025358677}
 --- !u!114 &6498219409858839575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,6 +508,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6237028500531870283}
     m_Modifications:
+    - target: {fileID: 3856998819189519976, guid: 4d37361dade4eda4c8b95aff892538ae, type: 3}
+      propertyPath: m_Color.a
+      value: 0.7490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 3856998819189519976, guid: 4d37361dade4eda4c8b95aff892538ae, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3207547
+      objectReference: {fileID: 0}
+    - target: {fileID: 3856998819189519976, guid: 4d37361dade4eda4c8b95aff892538ae, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3207547
+      objectReference: {fileID: 0}
+    - target: {fileID: 3856998819189519976, guid: 4d37361dade4eda4c8b95aff892538ae, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3207547
+      objectReference: {fileID: 0}
     - target: {fileID: 3856998820319510163, guid: 4d37361dade4eda4c8b95aff892538ae, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -597,6 +614,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3856998820319510173, guid: 4d37361dade4eda4c8b95aff892538ae, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3856998820603663975, guid: 4d37361dade4eda4c8b95aff892538ae, type: 3}
+      propertyPath: m_FillAmount
+      value: 0.914
+      objectReference: {fileID: 0}
+    - target: {fileID: 3856998820603663975, guid: 4d37361dade4eda4c8b95aff892538ae, type: 3}
+      propertyPath: m_FillOrigin
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

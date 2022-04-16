@@ -557,7 +557,7 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 067e81fa3a445454099cee5602247fb1
+      Hash: 64ff8d569ebebe4b442ccfb41eb45257
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UnitSpawner
@@ -1901,7 +1901,7 @@ ScriptsOnlyBuild:
     className: NetworkRigidbody2D
   - hash:
       serializedVersion: 2
-      Hash: 82b5fa49ea9807fa667ad3f7517fb1f1
+      Hash: d2df7289f01b15125e3585b231543041
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Unit

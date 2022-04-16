@@ -164,6 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  health: {fileID: 6060745312714642099}
   unitPrefab: {fileID: 5938189165136019942, guid: f75f89a92b7cc9b40860ca182f82c956, type: 3}
   unitSpawnPoint: {fileID: 440777562098436227}
 --- !u!114 &2021899400277775422

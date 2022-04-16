@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Mirror;
@@ -6,10 +7,28 @@ using UnityEngine.EventSystems;
 
 public class UnitSpawner : NetworkBehaviour, IPointerClickHandler
 {
+  [SerializeField] Health health = null;
   [SerializeField] GameObject unitPrefab = null;
   [SerializeField] Transform unitSpawnPoint = null;
 
   #region Server
+
+  public override void OnStartServer()
+  {
+    health.ServerOnDie += ServerHandleDie;
+  }
+
+  public override void OnStopServer()
+  {
+    health.ServerOnDie -= ServerHandleDie;
+  }
+
+  [Server]
+  void ServerHandleDie()
+  {
+    // Destroy network game objects
+    NetworkServer.Destroy(gameObject);
+  }
 
   [Command]
   void CmdSpawnUnit()

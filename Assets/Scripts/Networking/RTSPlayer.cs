@@ -50,12 +50,12 @@ public class RTSPlayer : NetworkBehaviour
 
   #region Client
 
-  // Subscribes to function so invokes when other function is called
-  public override void OnStartClient()
+  // Called on client for objects user has authority over
+  public override void OnStartAuthority()
   {
     // We don't want to store this on the server since the server is already
     // storing all the units for every player, so return if player is a server
-    if (!isClientOnly) { return; }
+    if (NetworkServer.active) { return; }
 
     Unit.AuthorityOnUnitSpawned += AuthorityHandleUnitSpawned;
     Unit.AuthorityOnUnitDespawned += AuthorityHandleUnitDespawned;
@@ -66,7 +66,7 @@ public class RTSPlayer : NetworkBehaviour
   {
     // We don't want to store this on the server since the server is already
     // storing all the units for every player, so return if player is a server
-    if (!isClientOnly) { return; }
+    if (!isClientOnly || !hasAuthority) { return; }
 
     Unit.AuthorityOnUnitSpawned -= AuthorityHandleUnitSpawned;
     Unit.AuthorityOnUnitDespawned -= AuthorityHandleUnitDespawned;
@@ -75,16 +75,12 @@ public class RTSPlayer : NetworkBehaviour
   // Add unit to list if player has authority on unit
   private void AuthorityHandleUnitSpawned(Unit unit)
   {
-    if (!hasAuthority) { return; }
-
     myUnits.Add(unit);
   }
 
   // Remove unit to list if player has authority on unit
   private void AuthorityHandleUnitDespawned(Unit unit)
   {
-    if (!hasAuthority) { return; }
-
     myUnits.Remove(unit);
   }
 

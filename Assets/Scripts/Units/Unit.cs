@@ -7,6 +7,7 @@ using UnityEngine.Events;
 
 public class Unit : NetworkBehaviour
 {
+  [SerializeField] Health health = null;
   [SerializeField] UnitMovement unitMovement = null;
   [SerializeField] Targeter targeter = null;
   [SerializeField] UnityEvent onSelected = null;
@@ -33,31 +34,39 @@ public class Unit : NetworkBehaviour
   public override void OnStartServer()
   {
     ServerOnUnitSpawned?.Invoke(this);
+
+    health.ServerOnDie += ServerHandleDie;
   }
 
   public override void OnStopServer()
   {
     ServerOnUnitDespawned?.Invoke(this);
+    
+    health.ServerOnDie -= ServerHandleDie;
+  }
+
+  [Server]
+  void ServerHandleDie()
+  {
+    NetworkServer.Destroy(gameObject);
   }
 
   #endregion
 
   #region Client
 
-  public override void OnStartClient()
+  // Only invoke on behaviors that have authority
+  public override void OnStartAuthority()
   {
-    // If player is host/server or unit doesn't belong to player, return
-    // Only call the method below for clients who own the unit
-    if (!isClientOnly || !hasAuthority) { return; }
-
     AuthorityOnUnitSpawned?.Invoke(this);
   }
 
+  // Can't use OnStopAuthority since it only gets called when you
+  // explicitly remove authority
   public override void OnStopClient()
   {
-    // If player is host/server or unit doesn't belong to player, return
-    // Only call the method below for clients who own the unit
-    if (!isClientOnly || !hasAuthority) { return; }
+    // If user doesn't own the object, return
+    if (!hasAuthority) { return; }
 
     AuthorityOnUnitDespawned?.Invoke(this);
   }
