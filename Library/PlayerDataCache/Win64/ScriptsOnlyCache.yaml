@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - GameOverHandler
     - Health
     - HealthDisplay
     - RTSNetworkManager
@@ -8,6 +9,7 @@ ScriptsOnlyBuild:
     - Targetable
     - Targeter
     - Unit
+    - UnitBase
     - UnitCommandGiver
     - UnitFiring
     - UnitMovement
@@ -310,6 +312,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6650}
     - Class: 114
       Script: {instanceID: 6898}
+    - Class: 114
+      Script: {instanceID: 26248}
+    - Class: 114
+      Script: {instanceID: 26256}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -899,7 +905,7 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: 642f836ec0876606c27e63a67cf18dcd
+      Hash: c99051cc0a4f103bf7e37da1b978d087
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RTSNetworkManager
@@ -2133,6 +2139,18 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
+  - hash:
+      serializedVersion: 2
+      Hash: 380ddbbf75cc03be59f0520ff8452c87
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UnitBase
+  - hash:
+      serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOverHandler
   platform: 19
   scenePathNames:
   - Assets/Scenes/Scene_Menu.unity

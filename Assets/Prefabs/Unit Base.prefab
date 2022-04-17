@@ -96,8 +96,9 @@ GameObject:
   - component: {fileID: 2021899400277775422}
   - component: {fileID: 6060745312714642099}
   - component: {fileID: 9172644393279397585}
+  - component: {fileID: -3099576068256172933}
   m_Layer: 0
-  m_Name: Unit Spawner
+  m_Name: Unit Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -212,6 +213,21 @@ MonoBehaviour:
   health: {fileID: 6060745312714642099}
   healthBarParent: {fileID: 4186015122724000715}
   healthBarImage: {fileID: 4186015122473401137}
+--- !u!114 &-3099576068256172933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7673955767967707108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4598cc1ae6cac4b84e5c60e036ef66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  health: {fileID: 6060745312714642099}
 --- !u!1 &8430623280181609530
 GameObject:
   m_ObjectHideFlags: 0
