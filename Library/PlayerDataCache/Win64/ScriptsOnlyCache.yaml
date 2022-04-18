@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - GameOverDisplay
     - GameOverHandler
     - Health
     - HealthDisplay
@@ -71,6 +72,12 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources
     - UnityEngine.Rendering.Universal.Vignette
     - UnityEngine.Rendering.Universal.XRSystemData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -126,17 +133,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1624}
     - Class: 114
+      Script: {instanceID: 1626}
+    - Class: 114
       Script: {instanceID: 1694}
     - Class: 114
       Script: {instanceID: 1758}
     - Class: 114
       Script: {instanceID: 1868}
     - Class: 114
+      Script: {instanceID: 2106}
+    - Class: 114
       Script: {instanceID: 3096}
     - Class: 114
       Script: {instanceID: 3314}
     - Class: 114
+      Script: {instanceID: 3378}
+    - Class: 114
       Script: {instanceID: 3450}
+    - Class: 114
+      Script: {instanceID: 4138}
     - Class: 114
       Script: {instanceID: 4260}
     - Class: 114
@@ -155,7 +170,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6478}
     - Class: 114
       Script: {instanceID: 6596}
+    - Class: 114
+      Script: {instanceID: 27070}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -192,6 +211,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
     - Class: 65
@@ -225,6 +246,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2028}
     - Class: 114
+      Script: {instanceID: 2106}
+    - Class: 114
       Script: {instanceID: 2118}
     - Class: 114
       Script: {instanceID: 2446}
@@ -234,6 +257,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 2484}
     - Class: 114
       Script: {instanceID: 2486}
+    - Class: 114
+      Script: {instanceID: 2556}
     - Class: 114
       Script: {instanceID: 2792}
     - Class: 114
@@ -297,6 +322,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5784}
     - Class: 114
+      Script: {instanceID: 5892}
+    - Class: 114
       Script: {instanceID: 6036}
     - Class: 114
       Script: {instanceID: 6174}
@@ -306,6 +333,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6280}
     - Class: 114
       Script: {instanceID: 6306}
+    - Class: 114
+      Script: {instanceID: 6342}
     - Class: 114
       Script: {instanceID: 6500}
     - Class: 114
@@ -2151,6 +2180,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameOverHandler
+  - hash:
+      serializedVersion: 2
+      Hash: a9f7a8bcf61cced643d9cd80097869da
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOverDisplay
   platform: 19
   scenePathNames:
   - Assets/Scenes/Scene_Menu.unity
