@@ -1,3 +1,4 @@
+using System;
 using Mirror;
 using UnityEngine;
 using UnityEngine.AI;
@@ -9,6 +10,21 @@ public class UnitMovement : NetworkBehaviour
   [SerializeField] float chaseRange = 10f;
 
   #region Server
+
+  public override void OnStartServer()
+  {
+    GameOverHandler.ServerOnGameOver += ServerHandleGameOver;
+  }
+
+  public override void OnStopServer()
+  {
+    GameOverHandler.ServerOnGameOver += ServerHandleGameOver;
+  }
+
+  void ServerHandleGameOver()
+  {
+    agent.ResetPath();
+  }
 
   [ServerCallback] // Prevents client from calling this
   void Update()
