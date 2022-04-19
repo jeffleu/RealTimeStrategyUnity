@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - FaceCamera
     - GameOverDisplay
     - GameOverHandler
     - Health
@@ -345,6 +346,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6680}
     - Class: 114
       Script: {instanceID: 6928}
+    - Class: 114
+      Script: {instanceID: 24478}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -2186,6 +2189,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FaceCamera
   platform: 19
   scenePathNames:
   - Assets/Scenes/Scene_Menu.unity

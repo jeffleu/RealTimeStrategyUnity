@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Units\UnitSelectionHandler.cs" />
+     <Compile Include="Assets\Scripts\Buildings\UnitBase.cs" />
      <Compile Include="Assets\Scripts\Buildings\UnitSpawner.cs" />
      <Compile Include="Assets\Scripts\Networking\RTSPlayer.cs" />
      <Compile Include="Assets\Scripts\Combat\HealthDisplay.cs" />
@@ -47,11 +48,11 @@
      <Compile Include="Assets\Scripts\Combat\Targetable.cs" />
      <Compile Include="Assets\Scripts\Units\UnitMovement.cs" />
      <Compile Include="Assets\Scripts\Units\Unit.cs" />
+     <Compile Include="Assets\Scripts\Buildings\GameOverHandler.cs" />
      <Compile Include="Assets\Scripts\Units\UnitCommandGiver.cs" />
      <Compile Include="Assets\Scripts\Units\UnitFiring.cs" />
-     <Compile Include="Assets\Scripts\Buildings\UnitBase.cs" />
-     <Compile Include="Assets\Scripts\Buildings\GameOverHandler.cs" />
      <Compile Include="Assets\Scripts\Menus\GameOverDisplay.cs" />
+     <Compile Include="Assets\Scripts\Cameras\FaceCamera.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
