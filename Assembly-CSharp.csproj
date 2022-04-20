@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Units\UnitFiring.cs" />
      <Compile Include="Assets\Scripts\Menus\GameOverDisplay.cs" />
      <Compile Include="Assets\Scripts\Cameras\FaceCamera.cs" />
+     <Compile Include="Assets\Scripts\Buildings\Building.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
